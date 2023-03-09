@@ -5,13 +5,13 @@ import org.userwebapp.model.Book;
 import java.util.List;
 
 public interface BooksDAO {
-    public int save(Book book);
+    public int create(Book book);
 
     public int update(Book book);
 
     public void delete(int id);
 
-    public Book getBook(int isbn);
+    public Book retrieveSingleBook(int bookID);
 
     public List<Book> getBookList();
 }
