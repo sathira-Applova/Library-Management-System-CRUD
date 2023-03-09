@@ -56,8 +56,8 @@ public class BooksDAOI implements BooksDAO {
             @Override
             public Book extractData(ResultSet rs) throws SQLException, DataAccessException {
                 if (rs.next()) {
-                    int noOfCopies = rs.getInt("noOfCopies");
-                    String bookID = rs.getString("bookID"), bookName = rs.getString("bookName");
+                    int bookID = rs.getInt("bookID"), noOfCopies = rs.getInt("noOfCopies");
+                    String bookName = rs.getString("bookName");
 
                     return new Book(bookID, bookName, noOfCopies);
                 } else
@@ -77,7 +77,7 @@ public class BooksDAOI implements BooksDAO {
             public List<Book> extractData(ResultSet rs) throws SQLException, DataAccessException {
                 if (rs.next()) {
                     do {
-                        bookList.add(new Book(rs.getString("bookID"), rs.getString("bookName"), rs.getInt("noOfCopies")));
+                        bookList.add(new Book(rs.getInt("bookID"), rs.getString("bookName"), rs.getInt("noOfCopies")));
                     } while (rs.next());
                 }
                 return bookList;
