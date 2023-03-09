@@ -2,12 +2,13 @@ package org.userwebapp.model;
 
 public class Book {
     //properties
-    private String bName, bookID;
+    private String bName;
+    private int bookID;
     private int noOfCopies;
 
     public Book(){}
 
-    public Book(String bookID, String bName, int noOfCopies){
+    public Book(int bookID, String bName, int noOfCopies){
         this.bookID = bookID;
         this.bName = bName;
         this.noOfCopies = noOfCopies;
@@ -22,11 +23,11 @@ public class Book {
         this.bName = bName;
     }
 
-    public String getBookID() {
+    public int getBookID() {
         return bookID;
     }
 
-    public void setBookID(String bookID) {
+    public void setBookID(int bookID) {
         this.bookID = bookID;
     }
 
