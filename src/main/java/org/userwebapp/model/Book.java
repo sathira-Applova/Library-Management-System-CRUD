@@ -1,10 +1,14 @@
 package org.userwebapp.model;
 
+
 public class Book {
+
+
     //properties
+
     private String bName;
     private int bookID;
-    private int noOfCopies;
+    private int noOfCopies = 1;
 
     public Book(){}
 

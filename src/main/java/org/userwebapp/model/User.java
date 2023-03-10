@@ -2,21 +2,24 @@ package org.userwebapp.model;
 
 public class User {
     //attributes
-    private String uid, email, name, password;
+    private int uid = 0;
+    private String email, fName, lName, password;
 
     public User(){}
-    public User(String uid, String email, String name, String password) {
+
+    public User(int uid, String email, String fName, String lName, String password) {
         this.uid = uid;
         this.email = email;
-        this.name = name;
+        this.fName = fName;
+        this.lName = lName;
         this.password = password;
     }
 
-    public String getUid() {
+    public int getUid() {
         return uid;
     }
 
-    public void setUid(String uid) {
+    public void setUid(int uid) {
         this.uid = uid;
     }
 
@@ -28,12 +31,20 @@ public class User {
         this.email = email;
     }
 
-    public String getName() {
-        return name;
+    public String getfName() {
+        return fName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
     }
 
     public String getPassword() {

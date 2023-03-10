@@ -5,7 +5,7 @@
   <artifactId>user-management-system</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>user-management-system Maven Webapp</name>
+  <name>Library_Management_System Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
 
@@ -88,7 +88,7 @@
     <!-- Add Spring Web and MVC dependencies -->
   </dependencies>
   <build>
-    <finalName>user-management-system</finalName>
+    <finalName>Library_Management_System</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

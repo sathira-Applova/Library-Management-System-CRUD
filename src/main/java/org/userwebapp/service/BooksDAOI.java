@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -39,7 +38,7 @@ public class BooksDAOI implements BooksDAO {
     @Override
     public int update(Book book) {
         String query = "Update books set bookID=?, bookName=?, noOfCopies=? where bookID=?;";
-        return jdbcTemplate.update(query, book.getBookID(), book.getbName(), book.getNoOfCopies());
+        return jdbcTemplate.update(query, book.getBookID(), book.getbName(), book.getNoOfCopies(), book.getBookID());
     }
 
     @Override
